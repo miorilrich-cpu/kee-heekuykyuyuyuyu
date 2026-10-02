@@ -20,50 +20,49 @@ fontFamily: {
 sans: ['Mitr', 'sans-serif'],
 },
 colors: {
-cream: '#FFF5F9',
+cream: '#FFF8FA',
 pinky: {
-light: '#FFE6F2',
-DEFAULT: '#FFC9E5',
-dark: '#E67BB3',
-heart: '#FFADD6',
+light: '#FFF0F5',
+DEFAULT: '#FFD6E8',
+dark: '#E082A9',
+heart: '#FFB8D6',
 },
 purpley: {
-light: '#FFF0F7',
-DEFAULT: '#FFC9E5',
-dark: '#D86B9E',
+light: '#FFF5F8',
+DEFAULT: '#FFD6E8',
+dark: '#C8749B',
 },
 brown: {
-light: '#C274B3',
-DEFAULT: '#A05990',
-dark: '#803F72'
+light: '#D493B2',
+DEFAULT: '#B0658A',
+dark: '#8C4668'
 }
 }
 },
 boxShadow: {
-'soft': '0 4px 20px 2px rgba(160, 89, 144, 0.25)',
-'card': '0 10px 25px 5px rgba(160, 89, 144, 0.2)',
-'polaroid': '0 4px 10px rgba(160, 89, 144, 0.15)',
+'soft': '0 4px 20px 2px rgba(176, 101, 138, 0.15)',
+'card': '0 10px 25px 5px rgba(176, 101, 138, 0.12)',
 }
 }
 }
 </script>
 <style>
 body {
-background-color: #FFF5F9;
-color: #A05990;
+background-color: #FFF8FA;
+color: #B0658A;
 }
 ::-webkit-scrollbar {
 width: 8px;
 }
 ::-webkit-scrollbar-track {
-background: #FFF5F9;
+background: #FFF8FA;
 }
 ::-webkit-scrollbar-thumb {
-background: #A05990;
+background: #D493B2;
 border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-background: #803F72;
+background: #B0658A;
 }
 .modal {
 transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -77,20 +76,15 @@ transform: translateY(0) scale(1);
 }
 @keyframes float {
 0%, 100% { transform: translateY(0px) rotate(0deg); }
-50% { transform: translateY(-15px) rotate(5deg); }
+50% { transform: translateY(-12px) rotate(4deg); }
 }
 @keyframes float-reverse {
 0%, 100% { transform: translateY(0px) rotate(0deg); }
-50% { transform: translateY(15px) rotate(-8deg); }
-}
-@keyframes float-slow {
-0%, 100% { transform: translateY(0px) scale(1); }
-50% { transform: translateY(-8px) scale(1.05); }
+50% { transform: translateY(12px) rotate(-6deg); }
 }
 .animate-float { animation: float 4s ease-in-out infinite; }
 .animate-float-delayed { animation: float 4s ease-in-out 2s infinite; }
 .animate-float-reverse { animation: float-reverse 5s ease-in-out 1s infinite; }
-.animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
 @keyframes clef-bounce {
 0%, 100% { transform: scale(1) rotate(0deg); }
 50% { transform: scale(1.12) rotate(10deg); }
@@ -115,7 +109,7 @@ transform: translateY(-50px) translateX(-10px) scale(0.8) rotate(-15deg);
 .music-note {
 position: absolute;
 pointer-events: none;
-color: #A05990;
+color: #B0658A;
 font-size: 14px;
 font-weight: bold;
 animation: note-float 2s ease-out infinite;
@@ -129,9 +123,9 @@ animation: note-float 2s ease-out infinite;
 </div>
 <!-- ปุ่มเปิดเพลง -->
 <div class="fixed top-4 right-4 z-50">
-<button id="musicToggle" onclick="toggleMusic()" class="w-12 h-12 bg-white rounded-full p-1 shadow-md border-2 border-[#FFC9E5] flex items-center justify-center hover:scale-110 active:scale-95 transition-all group relative">
-<div class="w-full h-full rounded-full border-2 border-[#FFE6F2] bg-[#FFE6F2] flex items-center justify-center">
-<div id="cleficon" class="flex items-center justify-center text-[#A05990] transition-transform">
+<button id="musicToggle" onclick="toggleMusic()" class="w-12 h-12 bg-white rounded-full p-1 shadow-md border-2 border-[#FFD6E8] flex items-center justify-center hover:scale-110 active:scale-95 transition-all group relative">
+<div class="w-full h-full rounded-full border-2 border-[#FFF0F5] bg-[#FFF0F5] flex items-center justify-center">
+<div id="cleficon" class="flex items-center justify-center text-[#B0658A] transition-transform">
 <i data-lucide="music" class="w-5 h-5 stroke-[2.5]"></i>
 </div>
 </div>
@@ -140,57 +134,48 @@ animation: note-float 2s ease-out infinite;
 </div>
 <!-- Custom Theme SVGs -->
 <svg width="0" height="0" class="hidden absolute pointer-events-none">
-<symbol id="icon-teddy" viewBox="0 0 24 24" fill="currentColor">
-<circle cx="6" cy="7" r="3.5"/>
-<circle cx="6" cy="7" r="1.5" fill="#FFF5F9" />
-<circle cx="18" cy="7" r="3.5"/>
-<circle cx="18" cy="7" r="1.5" fill="#FFF5F9" />
-<path d="M12 6C8 6 4 10 4 15C4 20 7 22.5 12 22.5C17 22.5 20 20 20 15C20 10 17 6 12 6Z" />
-<circle cx="8.5" cy="12" r="1.2" fill="#FFF5F9" />
-<circle cx="15.5" cy="12" r="1.2" fill="#FFF5F9" />
-<ellipse cx="12" cy="16.5" rx="4" ry="3" fill="#FFF5F9" />
-<ellipse cx="12" cy="15" rx="1.5" ry="1" fill="#A05990" />
-<path d="M12 16v1.5M10.5 18c.5.5 2.5.5 3 0" stroke="#A05990" stroke-width="1.2" fill="none" stroke-linecap="round" />
+<symbol id="icon-fox" viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 2L3 9l3 11h12l3-11-9-7z" fill="#FFF0F5" stroke="#B0658A" stroke-width="1.5"/>
+<path d="M12 2l9 7-4 13H7L3 9l9-7z" fill="none"/>
+<path d="M12 14l-3-4h6l-3 4z" fill="#B0658A"/>
+<path d="M10 8L7 4l4 2-1 2zM14 8l3-4-4 2 1 2z" fill="#B0658A"/>
 </symbol>
-<symbol id="icon-button" viewBox="0 0 100 100">
-<circle cx="50" cy="50" r="46" fill="#FFC9E5" />
-<circle cx="50" cy="50" r="42" fill="#FFE6F2" />
-<circle cx="50" cy="50" r="28" fill="#FFF5F9" />
-<circle cx="50" cy="50" r="28" fill="none" stroke="#FFC9E5" stroke-width="2" />
-<circle cx="40" cy="40" r="5.5" fill="#FFFFFF" />
-<circle cx="60" cy="40" r="5.5" fill="#FFFFFF" />
-<circle cx="40" cy="60" r="5.5" fill="#FFFFFF" />
-<circle cx="60" cy="60" r="5.5" fill="#FFFFFF" />
-<path d="M38 39 L62 63 M62 39 L38 63" stroke="#A05990" stroke-width="8" stroke-linecap="round"/>
-<path d="M38 38 L62 62 M62 38 L38 62" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+<symbol id="icon-cat" viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 3l4 4h4a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V9a2 2 0 012-2h4l4-4z" fill="#FFF0F5" stroke="#B0658A" stroke-width="1.5"/>
+<path d="M5 8l3-4M19 8l-3-4" stroke="#B0658A" stroke-width="1.5" stroke-linecap="round"/>
+<circle cx="9" cy="13" r="1.5" fill="#B0658A"/>
+<circle cx="15" cy="13" r="1.5" fill="#B0658A"/>
+<path d="M12 15l-1 1h2l-1-1z" fill="#B0658A"/>
 </symbol>
-<symbol id="icon-heart-cute" viewBox="0 0 24 24" fill="#FFADD6">
+<symbol id="icon-dog" viewBox="0 0 24 24" fill="currentColor">
+<path d="M5 8c0-3 2-5 5-5h4c3 0 5 2 5 5v2l2 4v7a2 2 0 01-2 2h-2a2 2 0 01-2-2v-4h-4v4a2 2 0 01-2 2H7a2 2 0 01-2-2v-7l2-4V8z" fill="#FFF0F5" stroke="#B0658A" stroke-width="1.5"/>
+<circle cx="9" cy="11" r="1.2" fill="#B0658A"/>
+<circle cx="15" cy="11" r="1.2" fill="#B0658A"/>
+<ellipse cx="12" cy="14" rx="2" ry="1.5" fill="#B0658A"/>
+</symbol>
+<symbol id="icon-heart-cute" viewBox="0 0 24 24" fill="#FFB8D6">
 <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
 </symbol>
 </svg>
 <div class="max-w-md mx-auto min-h-screen bg-cream shadow-xl relative overflow-hidden">
 <!-- BACKGROUND DECORATIONS -->
-<div class="absolute inset-0 pointer-events-none z-0 overflow-hidden opacity-70">
-<svg class="absolute top-[2%] left-[8%] w-10 h-10 text-pinky animate-float opacity-40" viewBox="0 0 24 24"><use href="#icon-teddy"></use></svg>
-<svg class="absolute top-[7%] right-[12%] w-9 h-9 animate-float-delayed opacity-60" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
-<svg class="absolute top-[12%] left-[30%] w-6 h-6 animate-float-reverse opacity-80" viewBox="0 0 24 24"><use href="#icon-heart-cute"></use></svg>
-<svg class="absolute top-[20%] right-[5%] w-14 h-14 text-pinky animate-float opacity-30" viewBox="0 0 24 24"><use href="#icon-teddy"></use></svg>
-<svg class="absolute top-[26%] left-[6%] w-10 h-10 animate-float-delayed opacity-50" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
-<svg class="absolute top-[38%] left-[50%] w-7 h-7 opacity-80 animate-float-reverse" viewBox="0 0 24 24"><use href="#icon-heart-cute"></use></svg>
-<svg class="absolute top-[43%] left-[4%] w-12 h-12 text-pinky animate-float opacity-30" viewBox="0 0 24 24"><use href="#icon-teddy"></use></svg>
-<svg class="absolute top-[48%] right-[10%] w-11 h-11 animate-float-delayed opacity-70" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
-<svg class="absolute top-[65%] right-[6%] w-12 h-12 text-pinky animate-float-slow opacity-25" viewBox="0 0 24 24"><use href="#icon-teddy"></use></svg>
-<svg class="absolute top-[70%] left-[12%] w-8 h-8 animate-float-reverse opacity-60" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
-<svg class="absolute top-[85%] left-[6%] w-11 h-11 text-pinky animate-float-delayed opacity-35" viewBox="0 0 24 24"><use href="#icon-teddy"></use></svg>
-<svg class="absolute top-[82%] right-[22%] w-6 h-6 opacity-80 animate-float" viewBox="0 0 24 24"><use href="#icon-heart-cute"></use></svg>
-<svg class="absolute top-[92%] right-[8%] w-12 h-12 animate-float-reverse opacity-70" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
+<div class="absolute inset-0 pointer-events-none z-0 overflow-hidden opacity-60">
+<svg class="absolute top-[2%][left:8%] w-9 h-9 text-pinky animate-float opacity-50" viewBox="0 0 24 24"><use href="#icon-fox"></use></svg>
+<svg class="absolute top-[8%] right-[10%] w-8 h-8 animate-float-delayed opacity-60" viewBox="0 0 24 24"><use href="#icon-cat"></use></svg>
+<svg class="absolute top-[16%] left-[25%] w-6 h-6 animate-float-reverse opacity-70" viewBox="0 0 24 24"><use href="#icon-heart-cute"></use></svg>
+<svg class="absolute top-[22%] right-[6%] w-10 h-10 text-pinky animate-float opacity-40" viewBox="0 0 24 24"><use href="#icon-dog"></use></svg>
+<svg class="absolute top-[35%] left-[5%] w-9 h-9 animate-float-delayed opacity-50" viewBox="0 0 24 24"><use href="#icon-fox"></use></svg>
+<svg class="absolute top-[48%] right-[8%] w-9 h-9 animate-float-reverse opacity-60" viewBox="0 0 24 24"><use href="#icon-cat"></use></svg>
+<svg class="absolute top-[62%] left-[10%] w-10 h-10 text-pinky animate-float opacity-40" viewBox="0 0 24 24"><use href="#icon-dog"></use></svg>
+<svg class="absolute top-[78%] right-[15%] w-9 h-9 animate-float-delayed opacity-50" viewBox="0 0 24 24"><use href="#icon-fox"></use></svg>
+<svg class="absolute top-[90%] left-[8%] w-9 h-9 animate-float-reverse opacity-60" viewBox="0 0 24 24"><use href="#icon-cat"></use></svg>
 </div>
+
 <!-- Header / Hero Section -->
 <header class="bg-gradient-to-r from-pinky-light via-purpley-light to-cream pt-10 pb-8 px-6 relative rounded-b-[40px] shadow-sm z-10 border-b-4 border-white flex items-center gap-5 overflow-hidden">
 <div class="shrink-0 relative group cursor-pointer hover:scale-105 transition-transform duration-300">
-<svg class="absolute -top-3 -left-3 w-10 h-10 opacity-70 -rotate-12 z-0" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
 <div class="w-24 h-24 rounded-2xl border-[4px] border-white shadow-md overflow-hidden bg-white flex items-center justify-center relative z-10">
-<img src="ไม่มีชื่อ 81_20260925210212.png" alt="Ellejooxshop Logo" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/150x150/FFE6F2/A05990?text=Ellejooxshop';">
+<img src="att.PqThKzwTgYlGQCPUpQCBFUvb5uyuZ86bGxVj1nCkqOc.jpeg" alt="Ellejooxshop Logo" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/150x150/FFF0F5/B0658A?text=Ellejoox';">
 </div>
 <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-sm border-2 border-pinky-light group-hover:rotate-12 transition-transform z-20">
 <i data-lucide="heart" class="w-4 h-4 text-heart fill-heart"></i>
@@ -198,146 +183,119 @@ animation: note-float 2s ease-out infinite;
 </div>
 <div class="flex-1 text-left relative z-10">
 <div class="flex items-center gap-2 mb-1 opacity-80">
-<i data-lucide="star" class="w-4 h-4 text-brown fill-brown" stroke-width="1.5"></i>
-<i data-lucide="sparkles" class="w-4 h-4 text-brown" stroke-width="1.5"></i>
+<span class="text-xs">🦊 🐱 🐶</span>
 </div>
-<h1 class="text-[34px] leading-tight font-bold text-brown mb-2 relative">Ellejooxshop</h1>
+<h1 class="text-[30px] leading-tight font-bold text-brown mb-2 relative">Ellejooxshop</h1>
 <p class="text-brown-light text-[11px] leading-relaxed font-medium tracking-wide bg-white inline-block px-3 py-1.5 rounded-2xl shadow-sm border border-pinky-light">
 open 10:00 closed 21:00
 </p>
 </div>
 </header>
+
 <!-- Main Content -->
-<main class="px-6 py-8 space-y-12 relative z-10">
-<!-- รูปแบรนเนอร์ -->
+<main class="px-6 py-8 space-y-10 relative z-10">
+<!-- ข้อความต้อนรับ -->
+<section class="text-center">
+<h2 class="text-base font-bold text-brown flex items-center justify-center gap-2">
+<span>🦊</span> ยินดีต้อนรับสู่ร้านแอลลี่คั้บ <span>🐱</span>
+</h2>
+</section>
+
+<!-- รูปแบรนเนอร์ (ปรับขนาดตามสัดส่วนจริง) -->
 <section class="w-full">
-<div class="rounded-3xl overflow-hidden border-2 border-white shadow-card bg-white">
-<img src="ไม่มีชื่อ 80_20260925012941.png" alt="Banner" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='https://placehold.co/2400x800/FFE6F2/A05990?text=Banner+2400x800';">
+<div class="rounded-3xl overflow-hidden border-2 border-white shadow-card bg-white flex items-center justify-center">
+<img src="att.Npifs_CqXDXijsPMjaTyCyaGTbyCM5B3V0N0WJFOfRM.jpeg" alt="Banner" class="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-500" onerror="this.onerror=null; this.src='https://placehold.co/1200x600/FFF0F5/B0658A?text=Banner';">
 </div>
 </section>
-<!-- ปุ่มเช็คคิวงานข้างล่างแบรนเนอร์ -->
+
+<!-- ปุ่มเช็คคิวงาน -->
 <section class="space-y-3">
-<div class="hidden bg-white border-2 border-pinky-light rounded-2xl p-4 shadow-sm items-center justify-between">
-<div class="flex items-center gap-2">
-<span class="relative flex h-3 w-3">
-<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-pinky opacity-75"></span>
-<span class="relative inline-flex rounded-full h-3 w-3 bg-brown"></span>
-</span>
-<span class="text-xs font-medium text-brown">สถานะคิวงาน: เปิดรับคิวปกติ</span>
-</div>
-<span class="text-[10px] bg-pinky-light text-brown px-2 py-0.5 rounded-full font-medium">ว่าง 3 คิว</span>
-</div>
-<a href="https://docs.google.com/spreadsheets/d/1uwX-hvO_AWdwZnAQz25DjdqWlyWCRjQQ2DL0iQyrHiA/edit?usp=drivesdk" target="_blank" class="w-full py-3 px-4 rounded-2xl border-2 border-dashed border-brown/70 bg-cream hover:bg-pinky-light/50 transition-colors flex items-center justify-center gap-2 text-brown font-medium text-sm shadow-sm group">
+<a href="https://docs.google.com/spreadsheets/d/1uwX-hvO_AWdwZnAQz25DjdqWlyWCRjQQ2DL0iQyrHiA/edit?usp=drivesdk" target="_blank" class="w-full py-3.5 px-4 rounded-2xl border-2 border-dashed border-brown/50 bg-white hover:bg-pinky-light/50 transition-colors flex items-center justify-center gap-2 text-brown font-medium text-sm shadow-sm group relative">
+<svg class="absolute -top-3 left-6 w-6 h-6 bg-cream px-1" viewBox="0 0 24 24"><use href="#icon-heart-cute"></use></svg>
 <i data-lucide="calendar-check" class="w-5 h-5 text-brown group-hover:scale-110 transition-transform"></i>
-<span>เช็คคิวงานตรงนี้</span>
+<span>Check up-date สถานะสินค้า 🐶</span>
 </a>
 </section>
-<!-- Pricing Web Design -->
+
+<!-- รายละเอียดเพิ่มเติม -->
 <section class="relative">
 <h2 class="text-xl font-medium mb-4 flex items-center gap-2 border-b-2 border-pinky-light pb-2 text-brown">
 <i data-lucide="receipt" class="w-5 h-5 text-brown"></i>
-ราคาทำป้ายเริ่มต้น
+ราคาทำป้ายเริ่มต้น 🐾
 </h2>
 <div class="bg-white rounded-3xl shadow-card p-6 space-y-4 border-2 border-pinky-light relative">
-<svg class="absolute top-4 right-4 w-8 h-8 -rotate-12 drop-shadow-sm" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
-<svg class="absolute top-1/2 -left-3 w-8 h-8 bg-white rounded-full drop-shadow-sm p-1" viewBox="0 0 24 24"><use href="#icon-heart-cute"></use></svg>
-<div class="text-center pb-2 border-b border-dashed border-pinky/60">
-<p class="font-bold text-brown text-base">ยินดีต้อนรับสู่ร้านแอลลี่คั้บ 🦊🐈🐶</p>
-</div>
-<div class="text-[11.5px] text-brown-light space-y-2 relative z-10 leading-relaxed">
-<p class="font-medium text-brown">รายละเอียดเพิ่มเติม แนะนำควรอ่าน!!</p>
-<ul class="space-y-2 list-none">
-<li class="flex items-start gap-1.5"><span class="text-brown">☆</span> <span>ค่าส่ง EMS 50 thb. หากมีเกินทางเราขออนุญาตเรียกเก็บเพิ่มพร้อมแนบหลักฐานแนบไปให้ค่ะ</span></li>
-<li class="flex items-start gap-1.5"><span class="text-brown">☆</span> <span>สามารถฝากของได้ไม่จำกัด ( ยกเว้นทางเราเคลียร์บ้านต้องจัดส่งทันที )</span></li>
-<li class="flex items-start gap-1.5"><span class="text-brown">☆</span> <span>สามารถส่งต่อสิทธิ์ได้หลังชำระยอดครบเท่านั้น</span></li>
-<li class="flex items-start gap-1.5"><span class="text-brown">☆</span> <span>สามารถ Check up-date สถานะสินค้าใน #엘레update / Sheet</span></li>
-<li class="flex items-start gap-1.5"><span class="text-brown">☆</span> <span>ร้านเราส่งของอาทิตย์ละ 1 ครั้ง เนื่องจากมีติดทำงาน</span><br><br><span class="font-medium text-brown">งดเร่งใดๆทั้งสิ้น</span></li>
-<li class="flex items-start gap-1.5"><span class="text-brown">☆</span> <span>สินค้าทุกชิ้นหลังจากส่องไฟมีตำหนิหรือไม่มีก็ตามที่ถ่ายแจ้งไว้ หากสินค้าถึงมือแล้วมีตำหนิโผล่มาถือว่าเกิดจากขนส่งและสินค้าทุกชิ้นหากมีตำหนิมาจากโรงงาน ไม่รับเคลมใดๆทั้งสิ้น</span><br><br><span class="font-medium text-brown">ขอบคุณค่ะ</span></li>
-</ul>
-</div>
-</div>
-</section>
-<!-- Rules & Process -->
-<section class="space-y-2">
-<div class="grid grid-cols-2 gap-3.5">
-<!-- กรอบซ้าย: ขั้นตอน -->
-<div class="bg-white rounded-2xl p-4 shadow-sm border-2 border-pinky-light relative overflow-hidden flex flex-col justify-between">
-<svg class="absolute -right-3 -bottom-3 w-10 h-10 opacity-30 pointer-events-none" viewBox="0 0 100 100"><use href="#icon-button"></use></svg>
-<div>
-<h3 class="font-medium mb-3 flex items-center gap-1.5 text-sm text-brown relative z-10">
-<i data-lucide="clipboard-list" class="w-4 h-4 text-brown shrink-0"></i> ขั้นตอน
-</h3>
-<ul class="text-[11px] text-brown-light space-y-2 list-disc list-inside relative z-10 leading-snug">
-<li>รองานปกติ 4-8 ชม.</li>
-<li>งานเร่ง *2 ของราคา</li>
-<li>แจ้งบรีฟงานให้ครบถ้วน</li>
-<li>รีเช็คงานใน 30 นาที</li>
-<li>แก้ไขฟรีถ้าทําผิดบรีฟ</li>
-</ul>
-</div>
-</div>
-<!-- กรอบขวา: กฎของร้าน -->
-<div class="bg-white rounded-2xl p-4 shadow-sm border-2 border-pinky-light relative overflow-hidden flex flex-col justify-between">
-<svg class="absolute -right-2 -bottom-2 w-8 h-8 opacity-80 pointer-events-none" viewBox="0 0 24 24"><use href="#icon-heart-cute"></use></svg>
-<div>
-<h3 class="font-medium mb-3 flex items-center gap-1.5 text-sm text-brown relative z-10">
-<i data-lucide="shield-alert" class="w-4 h-4 text-brown shrink-0"></i> กฎของร้าน
-</h3>
-<ul class="text-[11px] text-brown-light space-y-2 list-disc list-inside relative z-10 leading-snug">
-<li>โอนแล้วไม่คืนเงินทุกกรณี</li>
-<li>ยกเลิกหลังตรวจ ไม่คืนเงิน</li>
-<li>ไม่รับทําตามแบบร้านอื่น</li>
-<li>งดตัดป้ายร้านอื่นมา</li>
-<li>งดจิก/เร่งงานทุกกรณี</li>
-</ul>
-</div>
-</div>
-</div>
-<!-- หมายเหตุลิขสิทธิ์ -->
-<p class="text-[9.5px] text-brown-light text-center leading-relaxed px-2 italic pt-1">
-หมายเหตุ: งดนําป้ายไปขาย แจก ดัดแปลง หรือเจน หรือเข้าระบบ Ai เพราะงานทุกชิ้นมีลิขสิทธิ์ หากตรวจพบการละเมิด ทางร้านขอดำเนินคดีตามกฎหมาย
+<svg class="absolute top-4 right-4 w-8 h-8 -rotate-12 drop-shadow-sm opacity-60" viewBox="0 0 24 24"><use href="#icon-heart-cute"></use></svg>
+
+<div class="relative z-10 space-y-2">
+<p class="font-bold text-xs text-brown flex items-center gap-1.5">
+<i data-lucide="alert-circle" class="w-4 h-4 text-brown"></i> รายละเอียดเพิ่มเติม แนะนำควรอ่าน!!
 </p>
+<ul class="space-y-1.5 text-[11px] text-brown-light leading-relaxed">
+<li class="flex items-start gap-1.5"><span>☆</span> <span>ค่าส่ง EMS 50 thb. หากมีเกินทางเราขออนุญาตเรียกเก็บเพิ่มพร้อมแนปหลักฐานแนปไปให้ค่ะ</span></li>
+<li class="flex items-start gap-1.5"><span>☆</span> <span>สามารถฝากของได้ไม่จำกัด ( ยกเว้นทางเราเคลียร์บ้านต้องจัดส่งทันที )</span></li>
+<li class="flex items-start gap-1.5"><span>☆</span> <span>สามารถส่งต่อสิทธิ์ได้หลังชำระยอดครบเท่านั้น</span></li>
+<li class="flex items-start gap-1.5"><span>☆</span> <span>สามารถ Check update สถานะสินค้าใน #엘레update / Sheet</span></li>
+<li class="flex items-start gap-1.5"><span>☆</span> <span>ร้านเราส่งของอาทิตย์ละ 1 ครั้ง เนื่องจากมีติดทำงาน <br>งดเร่งใดๆทั้งสิ้น</span></li>
+<li class="flex items-start gap-1.5"><span>☆</span> <span>สินค้าทุกชิ้นหลังจากส่องไฟมีตำหนิหรือไม่มีก็ตามที่ถ่ายแจ้งไว้ หากสินค้าถึงมือแล้วมีตำหนิโผล่มาถือว่าเกิดจากขนส่งและสินค้าทุกชิ้นหากมีตำหนิมาจากโรงงาน ไม่รับเคลมใดๆทั้งสิ้น <br>ขอบคุณค่ะ</span></li>
+<li class="flex items-start gap-1.5 font-medium text-brown pt-1"><span>💡</span> <span>หมายเหตุ: ราคาสินค้าสามารถขอต่อรองได้ตามความเหมาะสมนะคะ</span></li>
+</ul>
+</div>
+</div>
 </section>
+
 <!-- ปุ่มช่องทางการโอนเงิน -->
-<section>
-<button onclick="openPaymentModal()" class="w-full bg-white hover:bg-pinky-light/50 border-2 border-brown/70 text-brown py-3.5 px-5 rounded-2xl font-medium text-sm shadow-card flex items-center justify-between transition-all hover:scale-[1.02]">
+<section class="pt-2">
+<button onclick="openPaymentModal()" class="w-full bg-white hover:bg-pinky-light/50 border-2 border-brown/50 text-brown py-3.5 px-5 rounded-2xl font-medium text-sm shadow-card flex items-center justify-between transition-all hover:scale-[1.02]">
 <div class="flex items-center gap-3">
 <div class="w-9 h-9 rounded-xl bg-pinky-light flex items-center justify-center">
 <i data-lucide="qr-code" class="w-5 h-5 text-brown"></i>
 </div>
-<span class="text-brown font-medium">ช่องทางการโอนเงิน</span>
+<span class="text-brown font-medium">ช่องทางการโอนเงิน 🦊🐱🐶</span>
 </div>
 <i data-lucide="chevron-right" class="w-5 h-5 text-brown"></i>
 </button>
 </section>
+
+<!-- Work Parts Section -->
+<section class="bg-white rounded-3xl p-5 shadow-card border-2 border-pinky-light text-center space-y-4 relative overflow-hidden">
+<div class="flex items-center justify-center gap-1.5 text-brown font-bold text-xs">
+<i data-lucide="sparkles" class="w-4 h-4 text-brown"></i>
+<span>Work parts</span>
+</div>
+<p class="text-[11px] text-brown-light font-medium -mt-2">เลือกชิ้นส่วนประกอบงานตรงนี้</p>
+<div class="grid grid-cols-2 gap-3 max-w-xs mx-auto">
+<a href="https://ellejooxshop.ksmbxll.com/" target="_blank" class="bg-white border-2 border-pinky-light rounded-[24px] p-3 flex flex-col items-center justify-center gap-2 hover:border-pinky transition-all shadow-sm group">
+<div class="w-full aspect-square bg-pinky-light/40 border-2 border-dashed border-pinky rounded-2xl flex items-center justify-center text-brown group-hover:scale-105 transition-transform">
+<svg class="w-9 h-9" viewBox="0 0 24 24"><use href="#icon-cat"></use></svg>
+</div>
+<span class="text-[11px] font-medium text-brown truncate w-full">Review web</span>
+</a>
+<a href="https://ellejooxshop.ksmbxll.com/" target="_blank" class="bg-white border-2 border-pinky-light rounded-[24px] p-3 flex flex-col items-center justify-center gap-2 hover:border-pinky transition-all shadow-sm group">
+<div class="w-full aspect-square bg-pinky-light/40 border-2 border-dashed border-pinky rounded-2xl flex items-center justify-center text-brown group-hover:scale-105 transition-transform">
+<svg class="w-9 h-9" viewBox="0 0 24 24"><use href="#icon-heart-cute"></use></svg>
+</div>
+<span class="text-[11px] font-medium text-brown truncate w-full">สะสมแต้ม points</span>
+</a>
+</div>
+</section>
 </main>
-<!-- Footer / Contact Us -->
-<footer class="bg-cream pt-10 pb-12 px-6 rounded-t-[40px] text-center mt-2 relative z-10 border-t-2 border-pinky-light shadow-[0_-10px_20px_-5px_rgba(160,89,144,0.2)]">
-<h2 class="text-[15px] font-bold mb-6 mt-2 tracking-wider text-brown flex items-center justify-center gap-2 uppercase">
-CONTACT US <i data-lucide="heart" class="w-4 h-4 text-heart fill-heart"></i>
-</h2>
-<div class="flex flex-col items-center gap-3 mb-10">
-<div class="flex justify-center gap-3 w-full max-w-[280px]">
-<a href="https://ellejooxshop.ksmbxll.com/" target="_blank" class="flex-1 bg-brown text-white py-3 rounded-full text-[11px] font-medium tracking-wider hover:-translate-y-1 transition-transform shadow-md flex justify-center items-center gap-1.5 uppercase">
-<i data-lucide="cat" class="w-4 h-4"></i> REVIEW WEB
-</a>
-<a href="https://ellejooxshop.ksmbxll.com/" target="_blank" class="flex-1 bg-white border-[1.5px] border-brown text-brown py-3 rounded-full text-[11px] font-medium tracking-wider hover:-translate-y-1 transition-transform shadow-md flex justify-center items-center gap-1.5 uppercase">
-<i data-lucide="heart" class="w-4 h-4 text-heart fill-heart"></i> POINTS
-</a>
-</div>
-</div>
-<p class="text-[13px] font-medium text-brown flex items-center justify-center gap-1.5 italic">
-ขอบคุณที่ไว้วางใจ Ellejooxshop <i data-lucide="star" class="w-3.5 h-3.5 text-brown fill-pinky-light opacity-80"></i>
+
+<!-- Footer เล็กๆ น่ารัก -->
+<footer class="bg-cream pt-6 pb-8 px-6 text-center relative z-10">
+<p class="text-[12px] font-medium text-brown flex items-center justify-center gap-1.5 italic">
+✨ ขอบคุณที่ไว้วางใจ Ellejooxshop ✨
 </p>
 </footer>
+
 </div>
+
 <!-- Modal Payment -->
-<div id="paymentModal" class="modal fixed inset-0 z-[100] flex items-center justify-center bg-brown-dark/30 backdrop-blur-sm invisible opacity-0 p-4">
+<div id="paymentModal" class="modal fixed inset-0 z-[100] flex items-center justify-center bg-brown-dark/25 backdrop-blur-sm invisible opacity-0 p-4">
 <div class="modal-content bg-white w-full max-w-[90vw] sm:max-w-sm rounded-[30px] shadow-2xl overflow-hidden flex flex-col border-4 border-pinky-light relative">
 <div class="py-2.5 px-4 flex justify-between items-center bg-pinky-light border-b border-pinky/40 relative">
 <h3 class="font-medium text-sm flex items-center gap-2 text-brown">
 <i data-lucide="qr-code" class="w-4 h-4 text-brown"></i>
-<span>ช่องทางการโอนเงิน</span>
+<span>ช่องทางการโอนเงิน 🐾</span>
 </h3>
 <button onclick="closeModal('paymentModal')" class="w-6 h-6 shrink-0 bg-white/50 hover:bg-white rounded-full flex items-center justify-center transition-colors relative z-10">
 <i data-lucide="x" class="w-3.5 h-3.5 text-brown"></i>
@@ -345,29 +303,27 @@ CONTACT US <i data-lucide="heart" class="w-4 h-4 text-heart fill-heart"></i>
 </div>
 <div class="p-4 text-center bg-cream space-y-3 max-h-[75vh] overflow-y-auto">
 <div class="bg-white p-2.5 rounded-2xl inline-block shadow-sm border-2 border-dashed border-brown/40">
-<img src="https://placehold.co/200x200/FFE6F2/A05990?text=QR+CODE" alt="QR Code" class="w-36 h-36 mx-auto object-contain">
+<img src="att.lT4yxeTyfUn7jJQKz4a6ee81V-vz7ABBCq3rXIPONnk.jpeg" alt="QR Code" class="w-36 h-36 mx-auto object-contain" onerror="this.onerror=null; this.src='https://placehold.co/200x200/FFF0F5/B0658A?text=QR+CODE';">
 </div>
-<div class="-mt-1 text-center space-y-0.5">
-<p class="text-xs font-medium text-brown">Benyapa Jet.</p>
-<p class="text-[9.5px] text-brown-light font-medium">เช็คชื่อบัญชีก่อนโอน</p>
+<div class="text-center pb-1">
+<p class="text-[11px] text-brown-light font-medium">₊˚꒰🍓꒱‧ 𝙱𝚎𝚗𝚢𝚊𝚙𝚊 𝙹𝚎𝚝. ‧₊ ᵎᵎ 🍒</p>
 </div>
 <div class="bg-white p-2.5 rounded-2xl border border-brown/30 text-left space-y-1 shadow-sm">
 <div class="flex items-center gap-1.5">
 <i data-lucide="building-2" class="w-3.5 h-3.5 text-brown"></i>
-<p class="text-[11px] font-medium text-brown">ธนาคารกสิกรไทย (K-Bank)</p>
+<p class="text-[11px] font-medium text-brown">‎ ୨୧ 𐔌 𝙺𝚋𝚊𝚗𝚔</p>
 </div>
 <div class="flex items-center justify-between">
 <span class="font-medium text-brown text-xs tracking-wider">199-8-74535-3</span>
-<button onclick="navigator.clipboard.writeText('199-8-74535-3'); alert('คัดลอกเลขบัญชีธนาคารแล้ว!');" class="bg-pinky-light hover:bg-pinky text-brown text-[10px] px-2 py-0.5 rounded-md font-medium transition-colors">
+<button onclick="navigator.clipboard.writeText('1998745353'); alert('คัดลอกเลขบัญชีธนาคารแล้ว!');" class="bg-pinky-light hover:bg-pinky text-brown text-[10px] px-2 py-0.5 rounded-md font-medium transition-colors">
 คัดลอก
 </button>
 </div>
-<p class="text-[10px] text-brown-light font-medium">ชื่อบัญชี: Benyapa Jet.</p>
 </div>
 <div class="bg-white p-2.5 rounded-2xl border border-brown/30 text-left space-y-1 shadow-sm">
 <div class="flex items-center gap-1.5">
 <i data-lucide="wallet" class="w-3.5 h-3.5 text-brown"></i>
-<p class="text-[11px] font-medium text-brown">TrueMoney Wallet (ทรูมันนี่)</p>
+<p class="text-[11px] font-medium text-brown">𐔌♫ྀི⋆⑅ 𝑊𝑎𝑙𝑙𝑒𝑡</p>
 </div>
 <div class="flex items-center justify-between">
 <span class="font-medium text-brown text-xs tracking-wider">099-014-8135</span>
@@ -375,17 +331,16 @@ CONTACT US <i data-lucide="heart" class="w-4 h-4 text-heart fill-heart"></i>
 คัดลอก
 </button>
 </div>
-<p class="text-[10px] text-brown-light font-medium">ชื่อบัญชี: Benyapa Jet.</p>
 </div>
 <div class="space-y-1 pt-0.5">
 <div class="bg-white p-2.5 rounded-2xl border border-brown/30 text-left space-y-1 shadow-sm">
 <div class="flex items-center gap-1.5">
 <i data-lucide="file-text" class="w-3.5 h-3.5 text-brown"></i>
-<p class="text-[11px] font-medium text-brown">ข้อความกำกับโน้ตสลิป</p>
+<p class="text-[11px] font-medium text-brown">ข้อความกำกับสลิป</p>
 </div>
 <div class="flex items-center justify-between bg-cream px-2.5 py-1 rounded-xl border border-pinky-light">
-<span class="font-medium text-brown text-xs">…</span>
-<button onclick="navigator.clipboard.writeText('…'); alert('คัดลอกข้อความโน้ตสลิปแล้ว!');" class="bg-pinky hover:bg-pinky-dark text-white text-[10px] px-2 py-0.5 rounded-md font-medium transition-colors shadow-sm">
+<span class="font-medium text-brown text-xs">Shopping @ellejoox</span>
+<button onclick="navigator.clipboard.writeText('Shopping @ellejoox'); alert('คัดลอกข้อความโน้ตสลิปแล้ว!');" class="bg-pinky hover:bg-pinky-dark text-white text-[10px] px-2 py-0.5 rounded-md font-medium transition-colors shadow-sm">
 คัดลอก
 </button>
 </div>
@@ -394,6 +349,7 @@ CONTACT US <i data-lucide="heart" class="w-4 h-4 text-heart fill-heart"></i>
 </div>
 </div>
 </div>
+
 <!-- โหลด YouTube IFrame Player API -->
 <script src="https://www.youtube.com/iframe_api"></script>
 <!-- Data & Scripts -->
@@ -417,6 +373,7 @@ document.body.style.overflow = '';
 paymentModal.addEventListener('click', function(e) {
 if (e.target === paymentModal) closeModal('paymentModal');
 });
+
 /* ระบบ YouTube Music Player Integration */
 let player;
 let isPlaying = false;
